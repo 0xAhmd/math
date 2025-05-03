@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:math/widgets/result_section.dart';
-import 'package:math/widgets/top_section.dart';
+import '../widgets/result_section.dart';
+import '../widgets/top_section.dart';
 import 'package:math/pages/sigma_page.dart'; // Import SigmaPage
 
 class HomePage extends StatefulWidget {
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
     final List<Widget> pages = [
       CustomScrollView(
         slivers: [
-          SliverAppBar(
+          const SliverAppBar(
             pinned: true,
             expandedHeight: 150.0,
             backgroundColor: Colors.blue,
@@ -83,15 +83,15 @@ class _HomePageState extends State<HomePage> {
                   controller: _controller,
                   calculateFactorial: _calculateFactorial,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
                   child: Text(
                     "Result",
                     style: TextStyle(color: Colors.black, fontSize: 24),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10) ,
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10) ,
                   child: ResultSection(result: _result)),
                 if (_factorialSteps.isNotEmpty)
                   Padding(
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      CustomScrollView(
+      const CustomScrollView(
         slivers: [
           SliverAppBar(
             pinned: true,
