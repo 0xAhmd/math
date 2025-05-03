@@ -17,7 +17,7 @@ class ResultSection extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5), // Add shadow for depth
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3), // Shadow position
+            offset: const Offset(0, 3), // Shadow position
           ),
         ],
       ),
@@ -26,7 +26,7 @@ class ResultSection extends StatelessWidget {
         child: Text(
           result,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.blueAccent, // Use blue accent for better contrast
             fontSize: 26,
             fontWeight: FontWeight.bold, // Make the text bold

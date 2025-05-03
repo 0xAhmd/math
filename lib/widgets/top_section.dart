@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:math/widgets/custom_button.dart';
+import 'custom_button.dart';
 
 class TopSection extends StatelessWidget {
   const TopSection({
@@ -13,22 +13,22 @@ class TopSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+        const SizedBox(height: 20),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             "Input a Number to Calculate its Factorial",
             style: TextStyle(color: Colors.black, fontSize: 22),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: TextField(
             cursorColor: Colors.blueAccent,
             controller: controller,
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.blueAccent, width: 2),
               ),
@@ -38,7 +38,7 @@ class TopSection extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: CustomButton(
@@ -48,7 +48,7 @@ class TopSection extends StatelessWidget {
             calculateFactorial: calculateFactorial,
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
       ],
     );
   }
