@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:math/widgets/custom_button.dart';
-import 'package:math/widgets/result_section.dart';
-import 'package:math/widgets/sigma_steps.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/result_section.dart';
+import '../widgets/sigma_steps.dart';
 
 class SigmaPage extends StatefulWidget {
   const SigmaPage({super.key});
