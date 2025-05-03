@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:math/widgets/custom_button.dart';
 import 'package:math/widgets/result_section.dart';
-import 'package:math/widgets/sigma_chart.dart';
+import 'package:math/widgets/sigma_steps.dart';
 
 class SigmaPage extends StatefulWidget {
   const SigmaPage({super.key});
@@ -91,8 +91,13 @@ class _SigmaPageState extends State<SigmaPage> {
           const SizedBox(height: 20),
           ResultSection(result: result),
           const SizedBox(height: 20),
-          if (result.isNotEmpty)
-            SigmaChart(n: int.parse(nController.text)),
+          if (result.isNotEmpty) ...[
+            const SizedBox(height: 20),
+            CnSteps(
+              n: int.parse(nController.text),
+              x: double.parse(xController.text),
+            ),
+          ],
         ],
       ),
     );

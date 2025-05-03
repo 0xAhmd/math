@@ -17,11 +17,11 @@ class _HomePageState extends State<HomePage> {
   String _result = "";
   String _factorialSteps = "";
 
-  int _factorialRecursive(int n) {
-    if (n <= 1) {
-      return 1; // Base case: factorial of 0 or 1 is 1
+  BigInt _factorialRecursive(BigInt n) {
+    if (n <= BigInt.one) {
+      return BigInt.one; // Base case: factorial of 0 or 1 is 1
     }
-    return n * _factorialRecursive(n - 1); // Recursive case
+    return n * _factorialRecursive(n - BigInt.one); // Recursive case
   }
 
   void _calculateFactorial(String input) {
@@ -35,20 +35,19 @@ class _HomePageState extends State<HomePage> {
 
     int number = int.parse(input);
 
-    if (number > 65) {
-      setState(() {
-        _result = "Number out of range, try with another number.";
-        _factorialSteps = "";
-      });
-      return;
-    }
-
-    int factorial = _factorialRecursive(number);
+    BigInt factorial = _factorialRecursive(BigInt.from(number));
     List<String> steps = List.generate(number, (i) => (number - i).toString());
 
     setState(() {
-      _result = "Factorial of $number is $factorial";
-      _factorialSteps = "${steps.join(" × ")} = $factorial";
+      // Check if the number is less than 15
+      if (number < 15) {
+        _result = "Factorial of $number is $factorial";
+        _factorialSteps = "${steps.join(" × ")} = $factorial";
+      } else {
+        // Convert BigInt to double and format in scientific notation
+        _result = "Factorial of $number is ${factorial.toDouble().toStringAsExponential(6)}";
+        _factorialSteps = "${steps.join(" × ")} = ${factorial.toDouble().toStringAsExponential(6)}";
+      }
     });
   }
 
