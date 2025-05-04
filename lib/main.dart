@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           selectedItemColor: Colors.blueAccent,
           backgroundColor: Colors.grey[200],
         ),
-        scaffoldBackgroundColor: Colors.grey[200],
+        scaffoldBackgroundColor: Colors.grey[100],
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       home: const FactorialPage(),

@@ -67,7 +67,7 @@ class _FactorialPageState extends State<FactorialPage> {
         slivers: [
           const SliverAppBar(
             pinned: true,
-            expandedHeight: 150.0,
+            expandedHeight: 90.0,
             backgroundColor: Colors.blue,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
@@ -129,7 +129,7 @@ class _FactorialPageState extends State<FactorialPage> {
         slivers: [
           SliverAppBar(
             pinned: true,
-            expandedHeight: 150.0,
+            expandedHeight: 90.0,
             backgroundColor: Colors.blue,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
