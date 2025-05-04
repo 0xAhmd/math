@@ -43,7 +43,7 @@ class CnSteps extends StatelessWidget {
       children: [
         // Add the main formula at the top
         Math.tex(
-          r'C_n = \sum_{r=1}^n \frac{\sqrt{r-1} \cdot x^r}{n+1}',
+          r'C_n = \sum_{r=1}^n \frac{\sqrt{r-1} \cdot x^n}{n+1}',
           textStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           mathStyle: MathStyle.display,
           textScaleFactor: 1.5,
@@ -51,7 +51,7 @@ class CnSteps extends StatelessWidget {
         const SizedBox(height: 20),
         const Text(
           'Step-by-step Calculation:',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold , fontStyle: FontStyle.italic),
         ),
         const SizedBox(height: 10),
         ...stepsWidgets,
