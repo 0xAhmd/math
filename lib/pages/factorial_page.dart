@@ -3,14 +3,14 @@ import '../widgets/result_section.dart';
 import '../widgets/top_section.dart';
 import 'package:math/pages/sigma_page.dart'; // Import SigmaPage
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class FactorialPage extends StatefulWidget {
+  const FactorialPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<FactorialPage> createState() => _FactorialPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _FactorialPageState extends State<FactorialPage> {
   int _selectedIndex = 0; // Track the selected tab index
 
   final TextEditingController _controller = TextEditingController();
@@ -45,8 +45,10 @@ class _HomePageState extends State<HomePage> {
         _factorialSteps = "${steps.join(" × ")} = $factorial";
       } else {
         // Convert BigInt to double and format in scientific notation
-        _result = "Factorial of $number is ${factorial.toDouble().toStringAsExponential(6)}";
-        _factorialSteps = "${steps.join(" × ")} = ${factorial.toDouble().toStringAsExponential(6)}";
+        _result =
+            "Factorial of $number is ${factorial.toDouble().toStringAsExponential(6)}";
+        _factorialSteps =
+            "${steps.join(" × ")} = ${factorial.toDouble().toStringAsExponential(6)}";
       }
     });
   }
@@ -91,8 +93,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10) ,
-                  child: ResultSection(result: _result)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
+                  child: ResultSection(result: _result),
+                ),
                 if (_factorialSteps.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.all(20),
@@ -133,9 +139,7 @@ class _HomePageState extends State<HomePage> {
               centerTitle: true,
             ),
           ),
-          SliverToBoxAdapter(
-            child: SigmaPage(), 
-          ),
+          SliverToBoxAdapter(child: SigmaPage()),
         ],
       ),
     ];

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'pages/home_page.dart';
+import 'pages/factorial_page.dart';
 
 //
 void main() {
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.grey[200],
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      home: const HomePage(),
+      home: const FactorialPage(),
       debugShowCheckedModeBanner: false,
     );
   }
